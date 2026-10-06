@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComicCraft | Create your comic</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top"><div class="brand">✨ ComicCraft</div><span>AI Comic Story Creator</span></header>
+<main class="hero">
+  <section class="intro">
+    <div class="eyebrow">YOUR IDEA, YOUR COMIC</div>
+    <h1>Turn your imagination<br><span>into a comic.</span></h1>
+    <p>Describe a story, choose your style, and create a five-panel comic with narration and dialogue.</p>
+    <div class="chips"><span>✍️ Your story</span><span>🎨 Comic panels</span><span>📄 PDF export</span></div>
+  </section>
+  <section class="form-card">
+    <h2>Build your story</h2><p class="muted">Fill in the details to begin.</p>
+    <form action="/generate" method="post">
+      <label for="prompt">Story idea</label>
+      <textarea id="prompt" name="prompt" required minlength="5" placeholder="A curious rabbit discovers a hidden garden..."></textarea>
+      <div class="two">
+        <div><label for="character">Main character</label><input id="character" name="character" value="Milo" required></div>
+        <div><label for="setting">Setting</label><select id="setting" name="setting"><option>Enchanted forest</option><option>School</option><option>City</option><option>Space</option><option>Seaside</option></select></div>
+      </div>
+      <div class="two">
+        <div><label for="tone">Story tone</label><select id="tone" name="tone"><option>Funny</option><option>Adventure</option><option>Heartwarming</option><option>Mystery</option><option>Dramatic</option></select></div>
+        <div><label for="art_style">Art style</label><select id="art_style" name="art_style"><option>Comic book</option><option>Cartoon</option><option>Anime-inspired</option><option>Pixel art</option><option>Watercolor</option></select></div>
+      </div>
+      <button type="submit">Create my comic <span>→</span></button>
+    </form>
+    <p class="fine">Please avoid entering private or sensitive information.</p>
+  </section>
+</main>
+<footer>Made with imagination · ComicCraft</footer>
+</body></html>
